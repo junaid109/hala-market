@@ -1,4 +1,8 @@
+## HALA MARKET - Online shopping site
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+![gNTbn](https://user-images.githubusercontent.com/8495748/191492815-b4aa4845-1a8d-4a51-bd9d-17fdfb7c01f3.jpg)
 
 ## Getting Started
 
