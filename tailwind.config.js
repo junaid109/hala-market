@@ -7,6 +7,10 @@ module.exports = {
     theme: {
     extend: {
       colors: {
+        hala_blue: {
+          light: "#232f3e",
+          DEFAULT: "#131921",
+        },
         primary: "#1F2937",
         secondary: "#4B5563",
         accent: "#9CA3AF",
@@ -18,4 +22,5 @@ module.exports = {
     },
   },
   plugins: [],
+}
 }

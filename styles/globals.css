@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .container {
+    .link{
+    @apply cursor-pointer hover:underline
+    }
+  }
+}
+
 html,
 body {
   padding: 0;
