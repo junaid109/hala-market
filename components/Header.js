@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/dist/client/image'
-import { MenuIcon, SearchIcon, ShoppingIcon } from '@heroicons/react/outline' 
+import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline' 
 
 const style = {
     header: {
@@ -11,7 +11,7 @@ const style = {
     h1: {
         fontSize: '24px'
     }
-}
+} 
 
 export default function Header() {
   return (
@@ -20,12 +20,12 @@ export default function Header() {
         <div className='flex items-center bg-hala_blue p-1 flex-grow py-2'>
         <div className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
             <Image 
-            src="/logo.png"
+            src="/logo."
             alt="Hala Market Logo" 
             width={128} 
             height={77}
             objectFit="contain" 
-            className="cursor-pointer  "
+            className="cursor-pointer"
             />
             </div>
 
@@ -35,22 +35,61 @@ export default function Header() {
             </div>
 
             <div className='text-white flex items-center text-xs space-x-6  mx-6 whitespace-nowrap'>
-                <div className=' link'>
-                    <p>Hello Junaid</p>
-                    <p className='font-extrabold'>Account & Lists</p>
+                <div className='link'>
+                <p>Hello Junaid</p>
+                <p className='font-extrabold md:text-sm'>Account & Lists</p>
 
                 </div>
-                <div className=' link'>
+                <div className='link'>
                 <p>Returns</p>
-                <p className='font-extrabold'>Orders</p>
+                <p className='font-extrabold md:text-sm'>Orders</p>
                 </div>
-                <div className=' link'>
-                <ShoppingIcon className='h-10'></ShoppingIcon>
-                <p className='font-extrabold'>Basket</p>
+                <div className='relative link flex items-center '>
+                <span className='absolute top-0 right -0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold'>0</span>
+                <ShoppingCartIcon className='h-10'></ShoppingCartIcon>
+                <p className='hidden md:inline font-extrabold md:text-sm mt-2'>Basket</p>
                 </div>
             </div>
         </div>
+
+        <div className='flex items-center space-x-3 p-2 pl-6 bg-hala_blue-light text-white text-sm'>
+            <p className='link flex items-center'>
+                <MenuIcon className='h-6 mr-2'></MenuIcon>
+                All
+            </p>
+            <p className='link'>
+                Hala Video
+            </p>
+            <p className='link'>
+                Hala Business
+            </p>
+
+            <p className='link'>
+                Todays Deals
+            </p>
+
+            <p className='link hidden lg:inline-flex'>
+                Food & Grocery
+            </p>
+
+            <p className='link hidden lg:inline-flex'>
+                Hala Prime
+            </p>
+
+            <p className='link hidden lg:inline-flex'>
+                Buy Again
+            </p>
+
+            <p className='link hidden lg:inline-flex'>
+                Shopper Toolkit
+            </p>
+
+            <p className='link hidden lg:inline-flex'>
+                Health & Personal Care 
+            </p>
+        </div>
+        
     </header>
-    
-  )
+    )
 }
+
