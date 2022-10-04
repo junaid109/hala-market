@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/dist/client/image'
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline' 
+import { signIn, signOut, useSession } from 'next-auth/client'
 
 const style = {
     header: {
@@ -14,6 +15,7 @@ const style = {
 } 
 
 export default function Header() {
+
   return (
     <header style={style.header}>
         <h1 style={style.h1}>Hala Market</h1>
@@ -35,7 +37,7 @@ export default function Header() {
             </div>
 
             <div className='text-white flex items-center text-xs space-x-6  mx-6 whitespace-nowrap'>
-                <div className='link'>
+                <div onClick={signIn} className='cursor-pointer link'>
                 <p>Hello Junaid</p>
                 <p className='font-extrabold md:text-sm'>Account & Lists</p>
 

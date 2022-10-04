@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import Currency from 'react-currency-formatter'
 
-const Product = ({key, id, title, price, description, category, image}) => {
+const  Product = ({key, id, title, price, description, category, image}) => {
     const [rating] = React.useState(
         Math.floor(Math.random() * (5 - 1 + 1)) + 1
     )
