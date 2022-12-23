@@ -2,13 +2,26 @@ import { StarIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import React from 'react'
 import Currency from 'react-currency-formatter'
+import { useDispatch } from 'react-redux'
+import { addToBasket } from '../slices/basketSlice'
 
 const  Product = ({key, id, title, price, description, category, image}) => {
+    const dispatch = useDispatch()
+
     const [rating] = React.useState(
         Math.floor(Math.random() * (5 - 1 + 1)) + 1
     )
 
     const [hasPrime] = React.useState(Math.random() < 0.5)
+
+    const addItemToBasket = () => {
+        const basketItem = {
+            id, title, price, description, category, image, hasPrime
+        }
+
+        dispatch(addToBasket(basketItem))
+    }
+
 
 
   return (
@@ -40,7 +53,7 @@ const  Product = ({key, id, title, price, description, category, image}) => {
             </div>
 
     )}
-    <button>
+    <button onClick={addItemToBasket} className='mt-auto button'>
         Add to Basket
     </button>
 
