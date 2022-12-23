@@ -1,7 +1,7 @@
 import React from 'react'
-import Image from 'next/dist/client/image'
+import Image from 'next/Image'
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline' 
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 const style = {
     header: {
